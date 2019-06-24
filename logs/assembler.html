@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+    <style>
+      body {
+        padding: 20px 100px;
+        font-family: Arial;
+        color: #000;
+      }
+
+      h1 {
+        color: darkblue;
+      }
+
+      h3 {
+        color: darkgreen;
+      }
+
+      h4 {
+        color: darkblue;
+      }
+
+      h5 {
+        color: #666666;
+      }
+
+      span {
+        background: rgba(255, 255, 255, 0.5);
+      }
+
+      blockquote {
+        border: 1px dashed #d07100;
+        padding: 5px;
+        background: rgba(255, 255, 255, 0.5);
+        font-family: Courier;
+      }
+
+      table {
+        width: 100%;
+        text-align: left;
+        border-collapse: collapse;
+      }
+      
+      table th{
+        border-bottom: 1px solid #ddd;
+      }
+
+      table td{
+        border-bottom: 1px solid #e0e0e0;
+        padding: 5px 0;
+      }
+
+      .show-hover {
+        height: 18px;
+        overflow: hidden;
+      }
+
+      .show-hover:hover {
+        height: auto;
+      }
+
+    </style>
+    
+    <h1>ASSEMBLER LOGS</h1><p>Processed at 6/24/2019</p><hr/><h2>Starting to assemble...</h2><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Program Path: :</strong> ./tests/program.txt</span><h3>Source code:</h3><pre><textarea disabled rows="25" cols="100" style="padding: 10px">      @ /010
+INIC
+      LD UM
+      MM CONT
+      MM IMPAR
+      MM N2
+LOOP
+      LD CONT
+      - N
+      JZ FORA
+      LD CONT
+      + UM
+      MM CONT
+      LD IMPAR
+      + DOIS
+      MM IMPAR
+      + N2
+      MM N2
+      JP LOOP
+FORA
+      HM FORA
+UM    K  01
+DOIS  K  02
+IMPAR K 0
+N     K 4
+N2    K 0
+CONT  K 0
+      # INIC</textarea></pre><hr/><h3>**** STARTING STEP 1 *****</h3><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 1</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 1:</strong>       @ /010</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /000</span><h5>Executing pseudo instruction: @</h5><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+</table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 0:</strong> /010</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 2</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 2:</strong> INIC</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /010</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label:</strong> INIC</span><p>Inserting label in symbols table</p><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 1:</strong> /010</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 3</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 3:</strong>       LD UM</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /010</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> UM</span><p>Inserting label in symbols table</p><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 2:</strong> /012</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 4</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 4:</strong>       MM CONT</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /012</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> CONT</span><p>Inserting label in symbols table</p><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 3:</strong> /014</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 5</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 5:</strong>       MM IMPAR</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /014</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> IMPAR</span><p>Inserting label in symbols table</p><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 4:</strong> /016</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 6</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 6:</strong>       MM N2</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /016</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> N2</span><p>Inserting label in symbols table</p><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 5:</strong> /018</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 7</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 7:</strong> LOOP</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /018</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label:</strong> LOOP</span><p>Inserting label in symbols table</p><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 6:</strong> /018</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 8</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 8:</strong>       LD CONT</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /018</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> CONT</span><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 7:</strong> /01a</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 9</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 9:</strong>       - N</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /01a</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> N</span><p>Inserting label in symbols table</p><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 8:</strong> /01c</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 10</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 10:</strong>       JZ FORA</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /01c</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> FORA</span><p>Inserting label in symbols table</p><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 9:</strong> /01e</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 11</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 11:</strong>       LD CONT</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /01e</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> CONT</span><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 10:</strong> /020</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 12</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 12:</strong>       + UM</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /020</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> UM</span><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 11:</strong> /022</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 13</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 13:</strong>       MM CONT</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /022</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> CONT</span><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 12:</strong> /024</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 14</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 14:</strong>       LD IMPAR</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /024</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> IMPAR</span><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 13:</strong> /026</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 15</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 15:</strong>       + DOIS</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /026</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> DOIS</span><p>Inserting label in symbols table</p><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 14:</strong> /028</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 16</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 16:</strong>       MM IMPAR</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /028</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> IMPAR</span><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 15:</strong> /02a</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 17</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 17:</strong>       + N2</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /02a</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> N2</span><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 16:</strong> /02c</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 18</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 18:</strong>       MM N2</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /02c</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> N2</span><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 17:</strong> /02e</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 19</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 19:</strong>       JP LOOP</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /02e</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> LOOP</span><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 18:</strong> /030</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 20</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 20:</strong> FORA</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /030</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label:</strong> FORA</span><p>Label already in symbols table</p><p>Label already defined</p><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/030</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 19:</strong> /030</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 21</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 21:</strong>       HM FORA</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /030</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> FORA</span><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/030</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 20:</strong> /032</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 22</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 22:</strong> UM    K  01</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /032</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label:</strong> UM</span><p>Label already in symbols table</p><p>Label already defined</p><h5>Executing pseudo instruction: K</h5><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/032</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/030</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 21:</strong> /033</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 23</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 23:</strong> DOIS  K  02</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /033</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label:</strong> DOIS</span><p>Label already in symbols table</p><p>Label already defined</p><h5>Executing pseudo instruction: K</h5><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/032</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/030</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/033</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 22:</strong> /034</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 24</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 24:</strong> IMPAR K 0</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /034</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label:</strong> IMPAR</span><p>Label already in symbols table</p><p>Label already defined</p><h5>Executing pseudo instruction: K</h5><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/032</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/034</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/030</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/033</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 23:</strong> /035</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 25</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 25:</strong> N     K 4</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /035</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label:</strong> N</span><p>Label already in symbols table</p><p>Label already defined</p><h5>Executing pseudo instruction: K</h5><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/032</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/034</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/035</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/030</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/033</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 24:</strong> /036</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 26</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 26:</strong> N2    K 0</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /036</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label:</strong> N2</span><p>Label already in symbols table</p><p>Label already defined</p><h5>Executing pseudo instruction: K</h5><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/032</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>false</td>
+                            <td>?</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/034</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/036</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/035</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/030</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/033</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 25:</strong> /037</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 27</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 27:</strong> CONT  K 0</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /037</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label:</strong> CONT</span><p>Label already in symbols table</p><p>Label already defined</p><h5>Executing pseudo instruction: K</h5><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/032</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/037</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/034</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/036</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/035</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/030</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/033</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 26:</strong> /038</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 28</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 28:</strong>       # INIC</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Antes:</strong> /038</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Label Parameter:</strong> INIC</span><h5>Executing pseudo instruction: #</h5></div><h3>**** STARTING STEP 2 *****</h3><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 1</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 1:</strong>       @ /010</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /010</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">01      010                  @ /010</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /010</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 2</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 2:</strong> INIC</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /010</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">02      010            INIC</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /010</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 3</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 3:</strong>       LD UM</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /010</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 8</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 32</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 8032</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">03      010      8032            LD UM</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /012</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 4</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 4:</strong>       MM CONT</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /012</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 9</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 37</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 9037</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">04      012      9037            MM CONT</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /014</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 5</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 5:</strong>       MM IMPAR</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /014</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 9</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 34</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 9034</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">05      014      9034            MM IMPAR</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /016</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 6</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 6:</strong>       MM N2</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /016</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 9</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 36</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 9036</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">06      016      9036            MM N2</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /018</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 7</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 7:</strong> LOOP</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /018</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">07      018            LOOP</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /018</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 8</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 8:</strong>       LD CONT</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /018</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 8</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 37</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 8037</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">08      018      8037            LD CONT</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /01a</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 9</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 9:</strong>       - N</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /01a</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 5</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 35</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 5035</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">09      01a      5035            - N</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /01c</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 10</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 10:</strong>       JZ FORA</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /01c</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 1</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 30</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 1030</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">10      01c      1030            JZ FORA</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /01e</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 11</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 11:</strong>       LD CONT</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /01e</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 8</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 37</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 8037</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">11      01e      8037            LD CONT</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /020</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 12</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 12:</strong>       + UM</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /020</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 4</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 32</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 4032</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">12      020      4032            + UM</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /022</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 13</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 13:</strong>       MM CONT</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /022</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 9</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 37</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 9037</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">13      022      9037            MM CONT</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /024</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 14</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 14:</strong>       LD IMPAR</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /024</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 8</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 34</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 8034</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">14      024      8034            LD IMPAR</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /026</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 15</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 15:</strong>       + DOIS</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /026</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 4</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 33</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 4033</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">15      026      4033            + DOIS</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /028</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 16</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 16:</strong>       MM IMPAR</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /028</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 9</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 34</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 9034</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">16      028      9034            MM IMPAR</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /02a</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 17</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 17:</strong>       + N2</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /02a</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 4</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 36</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 4036</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">17      02a      4036            + N2</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /02c</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 18</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 18:</strong>       MM N2</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /02c</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 9</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 36</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 9036</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">18      02c      9036            MM N2</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /02e</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 19</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 19:</strong>       JP LOOP</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /02e</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> 0</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 18</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> 0018</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">19      02e      0018            JP LOOP</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /030</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 20</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 20:</strong> FORA</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /030</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">20      030            FORA</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /030</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 21</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 21:</strong>       HM FORA</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /030</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Mnemonic:</strong> c</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Operand Length:</strong> 3</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>operand:</strong> 30</span><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Instr. Code:</strong> c030</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">21      030      c030            HM FORA</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /032</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 22</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 22:</strong> UM    K  01</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /032</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">22      032      01      UM    K  01</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /033</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 23</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 23:</strong> DOIS  K  02</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /033</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">23      033      02      DOIS  K  02</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /034</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 24</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 24:</strong> IMPAR K 0</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /034</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">24      034      00      IMPAR K 0</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /035</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 25</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 25:</strong> N     K 4</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /035</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">25      035      04      N     K 4</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /036</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 26</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 26:</strong> N2    K 0</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /036</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">26      036      00      N2    K 0</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /037</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 27</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 27:</strong> CONT  K 0</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /037</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">27      037      00      CONT  K 0</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /038</span></div><div style="margin: 20px 0px 10px 2%; border: 1px solid #999; padding: 10px; background: rgba(150,150,150,0.2);"><h4>Proccessing line 28</h4><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Line 28:</strong>       # INIC</span>
+<p></p>
+<span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (current):</strong> /038</span><h4>Output: </h4><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">28      010                  # INIC</blockquote><hr/><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter (next):</strong> /010</span></div><h3>LISTING:</h3><pre><textarea disabled rows="25" cols="100" style="padding: 10px">01      010                  @ /010
+02      010            INIC
+03      010      8032            LD UM
+04      012      9037            MM CONT
+05      014      9034            MM IMPAR
+06      016      9036            MM N2
+07      018            LOOP
+08      018      8037            LD CONT
+09      01a      5035            - N
+10      01c      1030            JZ FORA
+11      01e      8037            LD CONT
+12      020      4032            + UM
+13      022      9037            MM CONT
+14      024      8034            LD IMPAR
+15      026      4033            + DOIS
+16      028      9034            MM IMPAR
+17      02a      4036            + N2
+18      02c      9036            MM N2
+19      02e      0018            JP LOOP
+20      030            FORA
+21      030      c030            HM FORA
+22      032      01      UM    K  01
+23      033      02      DOIS  K  02
+24      034      00      IMPAR K 0
+25      035      04      N     K 4
+26      036      00      N2    K 0
+27      037      00      CONT  K 0
+28      010                  # INIC</textarea></pre><h3>BUFFER:</h3><pre><textarea disabled rows="25" cols="100" style="padding: 10px">00 10 80 32 90 37 90 34 90 36 80 37 50 35 10 30 80 37 40 32 90 37 80 34 40 33 90 34 40 36 90 36 00 18 c0 30</textarea></pre><h3>Memory after assembling</h3><blockquote>
+
+<b>### MEMORY ###</b><br/>
+<table>
+<tr><th></th> <th>0</th> <th>1</th> <th>2</th> <th>3</th> <th>4</th> <th>5</th> <th>6</th> <th>7</th> <th>8</th> <th>9</th> <th>A</th> <th>B</th> <th>C</th> <th>D</th> <th>E</th> <th>F</th></tr>
+<tr><td><b>0x00_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x01_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x02_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x03_</b></td><td>00</td><td>00</td><td>01</td><td>02</td><td>00</td><td>04</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x04_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x05_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x06_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x07_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x08_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x09_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x0A_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x0B_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x0C_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x0D_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x0E_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr><tr><td><b>0x0F_</b></td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td><td>00</td></tr>
+</table>
+</blockquote><center><small>(Pass mouse over to open)</small></center><blockquote class="show-hover">
+
+<b>### Symbols Table ###</b><br/>
+<table>
+<tr><th>LABEL</th> <th>TYPE</th> <th>DEFINED</th> <th>VALUE</th></tr>
+ <tr>
+                            <td>INIC</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/010</td>
+                          </tr> <tr>
+                            <td>UM</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/032</td>
+                          </tr> <tr>
+                            <td>CONT</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/037</td>
+                          </tr> <tr>
+                            <td>IMPAR</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/034</td>
+                          </tr> <tr>
+                            <td>N2</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/036</td>
+                          </tr> <tr>
+                            <td>LOOP</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/018</td>
+                          </tr> <tr>
+                            <td>N</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/035</td>
+                          </tr> <tr>
+                            <td>FORA</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/030</td>
+                          </tr> <tr>
+                            <td>DOIS</td> 
+                            <td>ADDRESS</td> 
+                            <td>true</td>
+                            <td>/033</td>
+                          </tr></table>
+</blockquote><span style="padding: 5px; border: 1px solid #ccc; margin:auto 5px; font-family: Courier;"><strong>Counter Depois 27:</strong> /010</span></div>

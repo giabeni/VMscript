@@ -1,0 +1,28 @@
+01      010                  @ /010
+02      010            INIC
+03      010      8032            LD UM
+04      012      9037            MM CONT
+05      014      9034            MM IMPAR
+06      016      9036            MM N2
+07      018            LOOP
+08      018      8037            LD CONT
+09      01a      5035            - N
+10      01c      1030            JZ FORA
+11      01e      8037            LD CONT
+12      020      4032            + UM
+13      022      9037            MM CONT
+14      024      8034            LD IMPAR
+15      026      4033            + DOIS
+16      028      9034            MM IMPAR
+17      02a      4036            + N2
+18      02c      9036            MM N2
+19      02e      0018            JP LOOP
+20      030            FORA
+21      030      c030            HM FORA
+22      032      01      UM    K  01
+23      033      02      DOIS  K  02
+24      034      00      IMPAR K 0
+25      035      04      N     K 4
+26      036      00      N2    K 0
+27      037      00      CONT  K 0
+28      010                  # INIC

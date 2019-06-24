@@ -1,0 +1,11 @@
+      @ /010      ; inicia programa a partir de /010
+INIC
+      LD TRES     ; carrega constante 3 no acc
+      + DOIS      ; soma constante 2 ao acc
+      MM RESP     ; salva acc no endereço de resultado
+      HM INIC     ; para execução
+      @  /090     ; define constantes a partir de /090
+TRES  K  03       ; salva constante 3
+DOIS  K  02       ; salva constante 5
+RESP  K  0        ; zera resultado
+      # INIC      ; fim do programa

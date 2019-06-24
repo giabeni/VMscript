@@ -21,7 +21,6 @@ $ npm run program
 ```
 
 It will start the VM, assemble the program in ./tests/program.txt, load it to the virtual memory and execute it. 
-```
 
 ## Output
 

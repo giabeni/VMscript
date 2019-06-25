@@ -255,7 +255,7 @@ export class Assembler {
     }
   }
 
-  public static getOperandLength(mnemonic: string): number {
+  public static getOperandLength(mnemonic: string): number {    
     switch(mnemonic) {
       case 'JP': return 3;
       case 'JZ': return 3;

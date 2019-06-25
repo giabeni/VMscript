@@ -1,22 +1,28 @@
       @ /010
-LOOP  
-      LD CONT  ; acc = cont
-      JZ BREAK ; se cont = 0, sai
-      -  UM    ; desconta um cont
-      MM CONT  ; atualiza cont
-      LD CHAR  ; acc = char ('A')
-      MA OUT   ; salva char no end de resposta
-      +  UM    ; soma um no char
-      MM CHAR  ; atualiza valor de char
-      LD OUT   ; acc = OUT;
-      +  UM    ; soma um em resp
-      MM OUT   ; atualiza o end de resp
-      JP LOOP  ; retorna para inicio do loop
-BREAK          ; se chegar aqui
-      HM BREAK ; para execução
-      @  /050
-CONT  K  5
-UM    K  01  
-OUT   K  /90
-CHAR  K  "A"
-      # LOOP
+INIC
+      LD UM
+      MM CONT
+      MM IMPAR
+      MM N2
+LOOP
+      LD CONT
+      - N
+      JZ FORA
+      LD CONT
+      + UM
+      MM CONT
+      LD IMPAR
+      + DOIS
+      MM IMPAR
+      + N2
+      MM N2
+      JP LOOP
+FORA
+      HM FORA
+UM    K  01
+DOIS  K  02
+IMPAR K 0
+N     K 4
+N2    K 0
+CONT  K 0
+      # INIC

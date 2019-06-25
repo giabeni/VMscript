@@ -24,7 +24,7 @@ export class Tester {
 
   static testFile1() {
     const vm = new VirtualMachine();
-    vm.loadProgram('./tests/program.txt');
+    vm.loadProgram('./tests/program3.txt');
     vm.setPC(0x010);
     vm.run();
     vm.printMemory();
